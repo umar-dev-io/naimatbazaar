@@ -28,3 +28,11 @@ git add src/git.md
 git commit -m "Update git.md documentation"
 git pull origin main --rebase
 git push origin main
+
+
+
+
+
+git add .
+git commit -m "Fix default export in admin page"
+git push origin main
