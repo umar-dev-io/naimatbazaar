@@ -16,5 +16,17 @@ body {
   background-color: var(--color-bgCustom);
   color: #222222;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  padding-bottom: 70px;
+}
+
+@keyframes heartPump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-heartPump {
+  animation: heartPump 1.2s ease-in-out infinite;
 }
