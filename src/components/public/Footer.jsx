@@ -1,7 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, MapPin, Truck, ShieldCheck, ArrowRight } from "lucide-react";
+import { 
+  Phone, 
+  MapPin, 
+  Truck, 
+  ShieldCheck, 
+  ArrowRight, 
+  Leaf, 
+  Wheat, 
+  Nut, 
+  Sparkles 
+} from "lucide-react";
 import {
   footerContactData,
   productCategoriesData,
@@ -19,7 +29,52 @@ const iconMapping = {
 export default function Footer() {
   return (
     <footer className="bg-[#5c0000] text-[#dddddd] pt-12 pb-8 px-4 sm:px-6 relative overflow-hidden border-t border-[#8B0000]/40">
-      <div className="max-w-[1150px] mx-auto space-y-10">
+      
+      {/* ================= FLOATING ORGANIC ICONS (BACKGROUND) ================= */}
+      
+      {/* 1. Herbs Floating Badge - Top Left */}
+      <motion.div
+        animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-10 left-4 sm:left-10 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden sm:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+      >
+        <Leaf className="w-4 h-4 text-[#ffcc00]" />
+        <span>100% Pure Herbs</span>
+      </motion.div>
+
+      {/* 2. Oats / Wheat Floating Badge - Top Right */}
+      <motion.div
+        animate={{ y: [0, -15, 0], rotate: [0, -8, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        className="absolute top-12 right-4 sm:right-12 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden sm:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+      >
+        <Wheat className="w-4 h-4 text-[#ffcc00]" />
+        <span>Organic Oats</span>
+      </motion.div>
+
+      {/* 3. Dry Fruits Floating Badge - Middle/Bottom Left */}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [0, 6, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute bottom-28 left-6 sm:left-14 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden lg:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+      >
+        <Nut className="w-4 h-4 text-[#ffcc00]" />
+        <span>Premium Dry Fruits</span>
+      </motion.div>
+
+      {/* 4. Organic Goodness Badge - Bottom Right */}
+      <motion.div
+        animate={{ y: [0, -14, 0], rotate: [0, -6, 0] }}
+        transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+        className="absolute bottom-24 right-8 sm:right-16 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden lg:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+      >
+        <Sparkles className="w-4 h-4 text-[#ffcc00]" />
+        <span>Natural Wellness</span>
+      </motion.div>
+
+      {/* ================= MAIN FOOTER CONTENT ================= */}
+      <div className="max-w-[1150px] mx-auto space-y-10 relative z-10">
+        
         {/* Top Newsletter Card Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -121,13 +176,12 @@ export default function Footer() {
                 }}
               />
 
-              {/* Logo Circle Wrapper (Transparent background to fix dark corners) */}
+              {/* Logo Circle Wrapper */}
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="relative w-20 h-20 bg-transparent rounded-full flex items-center justify-center shadow-2xl border-2 border-[#ffcc00] overflow-hidden z-10"
               >
-                {/* Fully visible logo image */}
                 <motion.img
                   src="/images/favicon.png"
                   alt="Naimat Bazaar Logo"
