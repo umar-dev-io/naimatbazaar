@@ -32,8 +32,7 @@ export const customerCareData = [
 
 export const paymentMethodsData = [
   { name: "COD", textColor: "text-gray-900" },
-  { name: "VISA", textColor: "text-blue-900" },
-  { name: "MasterCard", textColor: "text-orange-700" },
+  { name: "Bank Account", textColor: "text-orange-700" },
   { name: "EasyPaisa", textColor: "text-emerald-700" },
   { name: "JazzCash", textColor: "text-red-600" }
 ];
