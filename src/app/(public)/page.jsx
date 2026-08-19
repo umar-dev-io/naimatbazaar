@@ -11,7 +11,6 @@ import FaqSection from "@/components/public/FaqSection";
 import BusinessOpportunity from "@/components/public/BusinessOpportunity";
 
 
-
 export default function MainPage() {
   return (
     <>
