@@ -8,6 +8,9 @@ import TrustAndStatsSection from "@/components/public/TrustAndStatsSection";
 import CallToActionBanner from "@/components/public/CallToActionBanner";
 import ReviewsSection from "@/components/public/ReviewsSection";
 import FaqSection from "@/components/public/FaqSection";
+import BusinessOpportunity from "@/components/public/BusinessOpportunity";
+
+
 
 export default function MainPage() {
   return (
