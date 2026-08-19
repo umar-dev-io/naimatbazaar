@@ -1,78 +1,115 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { 
+  Sparkles, 
+  TrendingUp, 
+  ShieldCheck, 
+  BadgePercent, 
+  Boxes, 
+  Truck, 
+  MessageCircle 
+} from 'lucide-react';
 
 export default function BusinessOpportunity() {
-  const whatsappNumber = "923000000000"; // Apna WhatsApp Number yahan likhein (without +)
+  // Apna official WhatsApp number yahan update karein (without +)
+  const whatsappNumber = "923000000000"; 
   const message = encodeURIComponent("Hello Naimat Bazaar! Main apna home business shuru karne ke baaray mein consultation lena chahta/chahti hoon.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <section className="py-12 bg-gradient-to-b from-gray-50 to-white border-y border-gray-100">
+    <section className="py-14 bg-gradient-to-b from-gray-50 via-white to-gray-50 border-y border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-2xl p-6 sm:p-10 shadow-xl border border-gray-100 relative overflow-hidden"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="bg-white rounded-2xl p-6 sm:p-10 shadow-lg border border-gray-200 relative overflow-hidden"
         >
-          {/* Top Badges */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="bg-primary/10 text-primary text-xs font-extrabold px-3 py-1 rounded-full">
-              ✨ Ghar Baithy
+          {/* Brand Ambient Glow */}
+          <div className="absolute top-0 right-0 -mt-10 -mr-10 w-56 h-56 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+
+          {/* Badges Bar */}
+          <div className="flex flex-wrap gap-2.5 mb-5">
+            <span className="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+              <Sparkles size={14} /> Ghar Baithy
             </span>
-            <span className="bg-emerald-100 text-emerald-800 text-xs font-extrabold px-3 py-1 rounded-full">
-              💰 Kam Investment
+            <span className="bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+              <TrendingUp size={14} /> Kam Investment
             </span>
-            <span className="bg-blue-100 text-blue-800 text-xs font-extrabold px-3 py-1 rounded-full">
-              🛡️ Zero Risk
+            <span className="bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+              <ShieldCheck size={14} /> Zero Risk
             </span>
           </div>
 
-          {/* Heading & Subheading */}
-          <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-3 leading-tight">
+          {/* Main Title & Subtitle */}
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 leading-tight tracking-tight">
             Apna Organic Wellness Business Shuru Karein!
           </h2>
           <p className="text-gray-600 text-sm sm:text-base font-medium mb-8 max-w-3xl leading-relaxed">
             Zero Sourcing Tension! Raw material, complete business guide, aur 100% wholesale rates—sab aap ke darwaze par.
           </p>
 
-          {/* Key Highlights Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
-              <div className="text-xl mb-2">🏷️</div>
-              <h3 className="font-extrabold text-gray-900 text-sm mb-1">First 6 Months Pure Wholesale Rates</h3>
-              <p className="text-xs text-gray-600">Shuruat mein maximum profit margin aap ka.</p>
-            </div>
+          {/* Feature Cards Grid (Matching ProductCard Hover Architecture) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+            <motion.div 
+              whileHover={{ y: -6, boxShadow: "0 12px 24px -8px rgba(0, 0, 0, 0.12)" }}
+              transition={{ duration: 0.3 }}
+              className="p-5 rounded-xl bg-gray-50/80 border border-gray-200 flex flex-col justify-between transition-all"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-3.5">
+                  <BadgePercent size={22} />
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-sm mb-1.5">First 6 Months Pure Wholesale Rates</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">Shuruat mein maximum profit margin aap ka.</p>
+              </div>
+            </motion.div>
 
-            <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
-              <div className="text-xl mb-2">🔄</div>
-              <h3 className="font-extrabold text-gray-900 text-sm mb-1">Complete Supply Chain</h3>
-              <p className="text-xs text-gray-600">Raw material + trusted sources ki direct access.</p>
-            </div>
+            <motion.div 
+              whileHover={{ y: -6, boxShadow: "0 12px 24px -8px rgba(0, 0, 0, 0.12)" }}
+              transition={{ duration: 0.3 }}
+              className="p-5 rounded-xl bg-gray-50/80 border border-gray-200 flex flex-col justify-between transition-all"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3.5">
+                  <Boxes size={22} />
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-sm mb-1.5">Complete Supply Chain</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">Raw material + trusted sources ki direct access.</p>
+              </div>
+            </motion.div>
 
-            <div className="p-4 rounded-xl bg-gray-50 border border-gray-100">
-              <div className="text-xl mb-2">🚚</div>
-              <h3 className="font-extrabold text-gray-900 text-sm mb-1">All-Pakistan Doorstep Delivery</h3>
-              <p className="text-xs text-gray-600">Material se packaging tak, sab delivered.</p>
-            </div>
+            <motion.div 
+              whileHover={{ y: -6, boxShadow: "0 12px 24px -8px rgba(0, 0, 0, 0.12)" }}
+              transition={{ duration: 0.3 }}
+              className="p-5 rounded-xl bg-gray-50/80 border border-gray-200 flex flex-col justify-between transition-all"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center mb-3.5">
+                  <Truck size={22} />
+                </div>
+                <h3 className="font-extrabold text-gray-900 text-sm mb-1.5">All-Pakistan Doorstep Delivery</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">Material se packaging tak, sab delivered.</p>
+              </div>
+            </motion.div>
           </div>
 
-          {/* WhatsApp CTA Button */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
-            <a
+          {/* Action Call Area */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 border-t border-gray-100">
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-sm px-7 py-3.5 rounded-xl shadow-md transition-colors cursor-pointer"
             >
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.12.553 4.113 1.518 5.85L.03 24l6.297-1.487a11.98 11.98 0 005.705 1.45h.005c6.646 0 12.03-5.385 12.03-12.032C24.062 5.385 18.677 0 12.031 0zm0 22.032h-.004a9.96 9.96 0 01-5.081-1.395l-.364-.216-3.778.892.909-3.685-.237-.377a9.96 9.96 0 01-1.528-5.219c0-5.502 4.477-9.979 9.981-9.979 5.503 0 9.98 4.477 9.98 9.979 0 5.503-4.477 9.98-9.978 9.98z"/>
-              </svg>
+              <MessageCircle size={20} className="fill-current" />
               <span>Get Business Consultation</span>
-            </a>
-            <span className="text-xs text-gray-500 font-medium">
+            </motion.a>
+            <span className="text-xs text-gray-500 font-semibold flex items-center gap-1">
               ⚡ Direct Chat with Naimat Bazaar Advisory
             </span>
           </div>
