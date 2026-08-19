@@ -55,7 +55,7 @@ export default function BusinessOpportunity() {
             </h2>
 
             <p className="text-gray-600 text-base sm:text-lg font-medium leading-relaxed">
-              Sourcing, production aur testing ki tension chhodain! Raw material se lekar complete branding guidance tak—sab **Naimat Bazaar Wholesale Program** ke tehat hum aap tak pohnchayein ge.
+              Sourcing, production aur testing ki tension chhodain! Raw material se lekar complete branding guidance tak—sab Naimat Bazaar Wholesale Program ke tehat hum aap tak pohnchayein ge.
             </p>
 
             {/* Bullet Points Checklist */}
