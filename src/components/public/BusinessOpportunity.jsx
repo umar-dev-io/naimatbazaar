@@ -8,11 +8,11 @@ import {
   ShieldCheck, 
   Percent, 
   Package, 
-  MessageCircle,
+  FaWhatsapp,
   CheckCircle2,
   Briefcase,
   ArrowRight
-  FaWhatsapp
+  
 } from 'lucide-react';
 
 export default function BusinessOpportunity() {
