@@ -9,7 +9,7 @@ export default function DealsBanner() {
         <div className="text-sm opacity-95">
           FREE DELIVERY All Over Pakistan, Rs.5000 Purchase per Hasil kreen.
           Free Gift, Kisi bhi (03) Product ko Purchase kreen.
-          Real Wholesale Prices, 5kg product quantity per.
+          Real Wholesale Prices, 5kg product quantity ky sath.
 
         </div>
       </div>
