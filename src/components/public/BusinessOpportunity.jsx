@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { FaWhatsapp } from "react-icons/fa";
 import { 
   Sparkles, 
   TrendingUp, 
