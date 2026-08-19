@@ -9,7 +9,7 @@ import CallToActionBanner from "@/components/public/CallToActionBanner";
 import ReviewsSection from "@/components/public/ReviewsSection";
 import FaqSection from "@/components/public/FaqSection";
 import BusinessOpportunity from "@/components/public/BusinessOpportunity";
-
+import VideoReels from '@/components/public/VideoReels';
 
 
 export default function MainPage() {
@@ -26,6 +26,7 @@ export default function MainPage() {
       <CallToActionBanner />
       <ReviewsSection />
       <FaqSection />
+      <VideoReels />
     </>
   );
 }
