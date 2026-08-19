@@ -10,7 +10,8 @@ import {
   Leaf, 
   Wheat, 
   Nut, 
-  Sparkles 
+  Sparkles,
+  Star
 } from "lucide-react";
 import {
   footerContactData,
@@ -30,47 +31,53 @@ export default function Footer() {
   return (
     <footer className="bg-[#5c0000] text-[#dddddd] pt-12 pb-8 px-4 sm:px-6 relative overflow-hidden border-t border-[#8B0000]/40">
       
-      {/* ================= FLOATING ORGANIC ICONS (BACKGROUND) ================= */}
+      {/* ================= FLOATING PURE ICONS (NO TEXT) ================= */}
       
-      {/* 1. Herbs Floating Badge - Top Left */}
+      {/* 1. Herb / Leaf Icon - Top Left Side Gap */}
       <motion.div
-        animate={{ y: [0, -12, 0], rotate: [0, 8, 0] }}
+        animate={{ y: [0, -14, 0], rotate: [0, 15, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 left-4 sm:left-10 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden sm:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+        className="absolute top-24 left-10 sm:left-20 bg-[#480000]/80 border border-[#ffcc00]/40 p-3 rounded-full text-[#ffcc00] shadow-lg backdrop-blur-md pointer-events-none z-0 hidden sm:flex items-center justify-center"
       >
-        <Leaf className="w-4 h-4 text-[#ffcc00]" />
-        <span>100% Pure Herbs</span>
+        <Leaf className="w-5 h-5 text-[#ffcc00]" />
       </motion.div>
 
-      {/* 2. Oats / Wheat Floating Badge - Top Right */}
+      {/* 2. Oats / Wheat Icon - Top Right Side Gap */}
       <motion.div
-        animate={{ y: [0, -15, 0], rotate: [0, -8, 0] }}
+        animate={{ y: [0, -16, 0], rotate: [0, -12, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-        className="absolute top-12 right-4 sm:right-12 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden sm:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+        className="absolute top-28 right-10 sm:right-24 bg-[#480000]/80 border border-[#ffcc00]/40 p-3 rounded-full text-[#ffcc00] shadow-lg backdrop-blur-md pointer-events-none z-0 hidden sm:flex items-center justify-center"
       >
-        <Wheat className="w-4 h-4 text-[#ffcc00]" />
-        <span>Organic Oats</span>
+        <Wheat className="w-5 h-5 text-[#ffcc00]" />
       </motion.div>
 
-      {/* 3. Dry Fruits Floating Badge - Middle/Bottom Left */}
+      {/* 3. Dry Fruits / Nut Icon - Middle Left Surroundings */}
       <motion.div
-        animate={{ y: [0, -10, 0], rotate: [0, 6, 0] }}
+        animate={{ y: [0, -12, 0], rotate: [0, 10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-28 left-6 sm:left-14 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden lg:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+        className="absolute bottom-36 left-12 sm:left-28 bg-[#480000]/80 border border-[#ffcc00]/40 p-3 rounded-full text-[#ffcc00] shadow-lg backdrop-blur-md pointer-events-none z-0 hidden lg:flex items-center justify-center"
       >
-        <Nut className="w-4 h-4 text-[#ffcc00]" />
-        <span>Premium Dry Fruits</span>
+        <Nut className="w-5 h-5 text-[#ffcc00]" />
       </motion.div>
 
-      {/* 4. Organic Goodness Badge - Bottom Right */}
+      {/* 4. Organic Sparkles Icon - Middle Right Surroundings */}
       <motion.div
-        animate={{ y: [0, -14, 0], rotate: [0, -6, 0] }}
+        animate={{ y: [0, -14, 0], scale: [1, 1.12, 1] }}
         transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-        className="absolute bottom-24 right-8 sm:right-16 bg-[#480000]/70 border border-[#ffcc00]/30 px-3 py-1.5 rounded-2xl shadow-lg backdrop-blur-md hidden lg:flex items-center gap-2 text-[#ffcc00] text-[11px] font-bold pointer-events-none z-0"
+        className="absolute bottom-40 right-12 sm:right-28 bg-[#480000]/80 border border-[#ffcc00]/40 p-3 rounded-full text-[#ffcc00] shadow-lg backdrop-blur-md pointer-events-none z-0 hidden lg:flex items-center justify-center"
       >
-        <Sparkles className="w-4 h-4 text-[#ffcc00]" />
-        <span>Natural Wellness</span>
+        <Sparkles className="w-5 h-5 text-[#ffcc00]" />
       </motion.div>
+
+      {/* 5. Golden Star Icon - Mid Center Background Accent */}
+      <motion.div
+        animate={{ y: [0, -10, 0], rotate: [0, -20, 0] }}
+        transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+        className="absolute top-1/2 left-6 sm:left-16 bg-[#480000]/60 border border-[#ffcc00]/30 p-2.5 rounded-full text-[#ffcc00] shadow-md backdrop-blur-sm pointer-events-none z-0 hidden xl:flex items-center justify-center"
+      >
+        <Star className="w-4 h-4 text-[#ffcc00]" />
+      </motion.div>
+
 
       {/* ================= MAIN FOOTER CONTENT ================= */}
       <div className="max-w-[1150px] mx-auto space-y-10 relative z-10">
