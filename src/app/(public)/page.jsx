@@ -19,6 +19,9 @@ export default function MainPage() {
       <DealsBanner />
       <TrustBar />
       <ProductCatalog />
+      <ProductCatalog />
+<BusinessOpportunity />
+<LiveResultsSection />
       <LiveResultsSection />
       <AboutSection/>
       <TrustAndStatsSection />
