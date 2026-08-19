@@ -4,7 +4,7 @@ export default function DealsBanner() {
       <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl p-5 text-center shadow-md">
         {/* Animated Title */}
         <div className="text-lg font-extrabold text-accent mb-3 inline-block animate-heartPump">
-          🔥 SPECIAL BUNDLE OFFER
+          🔥 UniOFFER
         </div>
 
         {/* Clean Structured Content List */}
