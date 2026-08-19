@@ -11,7 +11,7 @@ import {
   CheckCircle2,
   Briefcase,
   ArrowRight
-  import { FaWhatsapp } from "react-icons/fa";
+  FaWhatsapp
 } from 'lucide-react';
 
 export default function BusinessOpportunity() {
