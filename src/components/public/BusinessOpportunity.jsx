@@ -8,7 +8,7 @@ import {
   BadgePercent, 
   Boxes, 
   Truck, 
-  MessageCircle 
+  MessageCircle
 } from 'lucide-react';
 
 export default function BusinessOpportunity() {
