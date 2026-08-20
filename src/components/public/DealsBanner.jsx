@@ -21,7 +21,7 @@ export default function DealsBanner() {
           </li>
           <li className="flex items-center justify-center gap-2">
             <FaGift className="text-amber-300 shrink-0" />
-            <span><strong>Free Gift:</strong> Kisi bhi (03) Product ko Purchase kreen.</span>
+            <span><strong>Free Gift:</strong> koi bhi (03) Product ko Purchase kreen.</span>
           </li>
           <li className="flex items-center justify-center gap-2">
             <FaTag className="text-amber-300 shrink-0" />
