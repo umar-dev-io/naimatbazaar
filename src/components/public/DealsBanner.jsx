@@ -1,31 +1,30 @@
-
-import { FaFire, FaTruck, FaGift, FaTag } from "react-icons/fa";
+import { Flame, Truck, Gift, Tag } from "lucide-react";
 
 export default function DealsBanner() {
   return (
     <section className="max-w-[1100px] mx-auto px-4 mt-6" id="deals">
-      <div className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl p-5 text-center shadow-md">
+      <div className="bg-[#5c0000] text-white rounded-xl p-5 text-center shadow-lg border border-[#8B0000]/50">
         
-        {/* Animated Title with Fire Icons */}
-        <div className="text-lg font-extrabold text-accent mb-3 inline-flex items-center gap-2 animate-heartPump">
-          <FaFire className="text-amber-400" />
-          <span>SPECIAL OFFERS</span>
-          <FaFire className="text-amber-400" />
+        {/* Title with Flame Icons */}
+        <div className="text-base sm:text-lg font-black text-[#ffcc00] mb-3 inline-flex items-center justify-center gap-2 tracking-wide uppercase">
+          <Flame className="w-5 h-5 text-[#ffcc00] fill-[#ffcc00] shrink-0" />
+          <span>SPECIAL BUNDLE OFFER</span>
+          <Flame className="w-5 h-5 text-[#ffcc00] fill-[#ffcc00] shrink-0" />
         </div>
 
-        {/* Clean Content List with Icons */}
-        <ul className="text-sm opacity-95 space-y-2 max-w-xl mx-auto">
-          <li className="flex items-center justify-center gap-2">
-            <FaTruck className="text-amber-300 shrink-0" />
-            <span><strong>Free Delivery:</strong> All Over Pakistan, Rs. 5000 Purchase per Hasil kreen.</span>
+        {/* Content List with Clear Bullet Icons */}
+        <ul className="text-xs sm:text-sm text-gray-100 space-y-2 max-w-2xl mx-auto font-medium">
+          <li className="flex items-center justify-center gap-2 flex-wrap">
+            <Truck className="w-4 h-4 text-[#ffcc00] shrink-0" />
+            <span><strong className="text-white">Free Delivery:</strong> All Over Pakistan, Rs. 5000 Purchase per Hasil kreen.</span>
           </li>
-          <li className="flex items-center justify-center gap-2">
-            <FaGift className="text-amber-300 shrink-0" />
-            <span><strong>Free Gift:</strong> koi bhi (03) Product ko Purchase kreen.</span>
+          <li className="flex items-center justify-center gap-2 flex-wrap">
+            <Gift className="w-4 h-4 text-[#ffcc00] shrink-0" />
+            <span><strong className="text-white">Free Gift:</strong> Kisi bhi (03) Product ko Purchase kreen.</span>
           </li>
-          <li className="flex items-center justify-center gap-2">
-            <FaTag className="text-amber-300 shrink-0" />
-            <span><strong>Wholesale Rates:</strong> 5kg product quantity ky sath.</span>
+          <li className="flex items-center justify-center gap-2 flex-wrap">
+            <Tag className="w-4 h-4 text-[#ffcc00] shrink-0" />
+            <span><strong className="text-white">Wholesale Rates:</strong> 5kg product quantity ky sath.</span>
           </li>
         </ul>
 
@@ -33,6 +32,3 @@ export default function DealsBanner() {
     </section>
   );
 }
-
-
-
